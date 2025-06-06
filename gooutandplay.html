@@ -1,146 +1,117 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>Go Out and Play</title>
-<style>
+  <meta charset="UTF-8" />
+  <title>Go Out and Play</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f5f5f5;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
+    header {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav {
+      background: black;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      margin: 0 10px;
+      text-decoration: none;
     }
     .tagline {
       font-size: 1.2rem;
       color: #555;
       text-align: center;
-      margin-bottom: 20px;
+      margin: 20px 0;
+      background-color: white;
+    }
+    .container {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
-    table td, table th {
-      padding: 6px;
-      border: 1px solid #ccc;
+    .grid > div {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    table caption {
-      font-weight: bold;
-      margin-bottom: 8px;
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      flex-shrink: 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 5px;
     }
   </style>
 </head>
 <body>
-<header style="background:black;color:white;padding:20px 0;text-align:center;">
-<h1 style="margin:0;">Go Out and Play</h1>
-
-</header><nav style="margin-top:10px;">
-<a href="all_you_can_eat.html" style="color:white;font-weight:bold;margin:0 10px;">All You Can Eat</a>
-<a href="freebies.html" style="color:white;font-weight:bold;margin:0 10px;">Freebies</a>
-<a href="apple_a_day.html" style="color:white;font-weight:bold;margin:0 10px;">Apple a Day</a>
-<a href="go_out_and_play.html" style="color:white;font-weight:bold;margin:0 10px;">Go Out and Play</a>
-<a href="style.html" style="color:white;font-weight:bold;margin:0 10px;">Style</a>
-<a href="listen_here.html" style="color:white;font-weight:bold;margin:0 10px;">Listen Here</a>
-<a href="cheers_mate.html" style="color:white;font-weight:bold;margin:0 10px;">Cheers Mate</a>
-<a href="travel.html" style="color:white;font-weight:bold;margin:0 10px;">Travel</a>
-<a href="pets.html" style="color:white;font-weight:bold;margin:0 10px;">Pets</a>
-<a href="shop.html" style="color:white;font-weight:bold;margin:0 10px;">Shop</a>
-<a href="lounge.html" style="color:white;font-weight:bold;margin:0 10px;">Lounge</a>
-</nav><div class="tagline" style="text-align: center; background-color: white;">Broke Doesn’t Mean Bored</div>
-<div class="container">
-<div class="grid">
-<div style="background:#fff;padding:20px;margin-top:20px;border-radius:10px;box-shadow:0 0 5px rgba(0,0,0,0.1);">
-<h2>🎯 Go Out and Play — Fun on a Broken Budget</h2>
-<p>You don’t need a trust fund to touch grass. Fun isn’t about cash, it’s about creativity. Whether you’ve got $0 or $20, you can squeeze the most out of weekends, evenings, and random Tuesdays with zero guilt and full heart.</p>
-<p>This isn’t about being frugal — it’s about being feral (in the good way). You deserve joy that isn’t attached to a checkout screen. Your brain needs unstructured time. Your life needs dumb laughs. Let’s get it.</p>
-<h3>🌳 Nature Is Free</h3>
-<p>Park walks. City trails. River steps. Look up your nearest green space and just go. Touch bark. Stare at clouds. Pack snacks. Invite a friend or roll solo. The world is outside your door, and it costs nothing to access.</p>
-<h3>🎲 Games, Not Gear</h3>
-<p>Frisbee. Pick-up soccer. Sidewalk chalk. Card decks. Phone scavenger hunts. Group games don’t require fancy gear — they need a plan and people. You bring the vibe, not the Venmo.</p>
-<h3>💃 Make It a Moment</h3>
-<p>Theme nights. Potlucks. Weird playlists. Impromptu karaoke. Free museum day. Backyard movie. The event isn’t the budget — it’s the energy. Create a vibe that people want to remember.</p>
-<p><strong>Broke doesn’t mean bored. It means your fun comes with style, grit, and zero credit card debt.</strong></p>
-</div>
-<div style="background:#fffde8;padding:20px;border:1px solid #e2d9b8;border-radius:8px;">
-<table style="width:100%; border-collapse: collapse; margin-bottom: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.05); border-radius: 6px;">
-<caption style="font-weight: bold; margin-bottom: 8px;">Zero-Cost Outdoor Fun</caption>
-<thead style="background-color: #f9f6e8;">
-<tr>
-<th style="padding: 8px; border: 1px solid #ccc;">Activity</th>
-<th style="padding: 8px; border: 1px solid #ccc;">Where to Find It</th>
-</tr>
-</thead>
-<tbody>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Frisbee / Catch</td><td>Any open park or field</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Photo Walk</td><td>Neighborhood or nature trail</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Outdoor Workout</td><td>Playground or open space</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Bird Watching</td><td>Urban green space</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Sidewalk Chalk Art</td><td>Your street or driveway</td></tr>
-</tbody>
-</table>
-<table style="width:100%; border-collapse: collapse; box-shadow: 0 0 8px rgba(0,0,0,0.05); border-radius: 6px;">
-<caption style="font-weight: bold; margin-bottom: 8px;">Low-Cost Hangout Ideas</caption>
-<thead style="background-color: #f9f6e8;">
-<tr>
-<th style="padding: 8px; border: 1px solid #ccc;">Idea</th>
-<th style="padding: 8px; border: 1px solid #ccc;">Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Potluck Night</td><td>$0 (bring what you have)</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Backyard Movie</td><td>$0–$5 (if projector borrowed)</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Free Museum Day</td><td>$0 (check your city’s listings)</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Trivia Night at Home</td><td>$0–$2 (printables or app)</td></tr>
-<tr><td style="padding: 6px; border: 1px solid #ccc;">Theme Dress Party</td><td>$0 (use your closet)</td></tr>
-</tbody>
-</table>
-<div style="margin-top:20px;">
-<h3>🛠 Pop-Up Fun You Can Pack</h3>
-<p>Keep a foldable picnic blanket, a Bluetooth speaker, and a small game kit in your trunk or backpack. That’s instant hangout potential: set up anywhere, anytime. Bonus if you keep a thrifted frisbee, water balloons, or glow sticks on standby. Your future self will thank you.</p>
-<h3>🎯 Borrow, Trade, Share</h3>
-<p>Instead of buying gear new, coordinate a gear swap. One friend has spikeball, one has lawn darts, one has cornhole — rotate who brings what. Not only does it save money, it keeps the mix fresh and social.</p>
-</div>
-</div>
-<div style="background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 5px rgba(0,0,0,0.1);">
-<h3>Fun Hacks That Don’t Suck</h3>
-<p>🏓 Pickleball Pop-Ups<br/>Local parks, rec centers, or driveways. Grab a paddle set (check Amazon or Dick’s) and you’ve got the fastest-growing sport on a broke budget. Bonus: it's beginner-friendly and absurdly fun.</p>
-<p>🎯 Lawn Games Boost<br/>Frisbee golf, bocce, bean bag toss — these are affiliate-friendly, affordable, and last all season. Host a game night at the park with your own set, or rotate gear with friends.</p>
-<p>📅 City Freebies<br/>
-Check your city’s Facebook page or library website. Free concerts, night markets, outdoor yoga, story time, and swap meets live there — and they’re criminally underused.</p>
-<p>🎧 Themed Walks<br/>
-Queue a playlist. Assign a theme. “Walk like a spy.” “Walk like a baddie.” “Walk like you’re in a documentary.” Suddenly it’s fun and weird and memorable. No budget needed.</p>
-<p>📦 Spontaneity Kits<br/>
-Build a “fun bag” with sidewalk chalk, deck of cards, thrifted costume pieces, a Bluetooth speaker, and a Polaroid camera (if you have one). Instant entertainment kit, ready for any day off-script.</p>
-<p>📣 Low-Cost Promotions<br/>
-Follow small theaters, indie bookstores, rec centers. Their flyers are gold. You’ll find zines, poetry nights, under-$10 comedy, and offbeat art shows. You’re not broke — you’re on the underground circuit.</p>
-<h3>🧠 Mental Refresh Tactics</h3>
-<p>Take a “no plans” day. Go off-script. Wander. Take a bus to a random stop. Say yes to invites. When broke mode hits, you don’t shrink — you explore.</p>
-<p><strong>Go out. Be strange. Laugh loud. You’ll feel richer than half the city by nightfall.</strong></p>
-</div>
-</div>
-<div style="text-align: center; margin-top: 40px;">
-<a href="index.html" style="background-color: #333; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-        ⬅️ Back to Home
-      </a>
-</div>
-</div>
-<footer style="background:black;color:white;text-align:center;padding:20px 0;margin-top:40px;">
-<p style="margin:0;">© Broke Mode Life 2025 - All Rights Reserved</p>
-<nav style="margin-top:8px;">
-<a href="terms.html" style="color:#3399ff;margin:0 6px;">Terms</a> |
-      <a href="privacy.html" style="color:#3399ff;margin:0 6px;">Privacy</a> |
-      <a href="affiliate.html" style="color:#3399ff;margin:0 6px;">Affiliate</a> |
-      <a href="contact.html" style="color:#3399ff;margin:0 6px;">Contact</a> |
-      <a href="cookie.html" style="color:#3399ff;margin:0 6px;">Cookie</a>
-</nav>
-</footer>
+  <header>
+    <h1>Go Out and Play</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="freebies.html">Freebies</a>
+    <a href="all_you_can_eat.html">All You Can Eat</a>
+    <a href="apple_a_day.html">Apple a Day</a>
+    <a href="gooutandplay.html">Go Out and Play</a>
+    <a href="style.html">Style</a>
+    <a href="listen_here.html">Listen Here</a>
+    <a href="cheers_mate.html">Cheers Mate</a>
+    <a href="travel.html">Travel</a>
+    <a href="pets.html">Pets</a>
+    <a href="shop.html">Shop</a>
+    <a href="lounge.html">Lounge</a>
+  </nav>
+  <div class="tagline">Live Large on a Lean Budget</div>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>⚽ Gear Up</h2>
+        <p>Find the best budget picks for outdoor sports and recreation gear. From soccer balls to camping gear, we keep it under budget and high on value.</p>
+      </div>
+      <div>
+        <h2>🧭 Explore More</h2>
+        <p>Tips for visiting U.S. national parks, state parks, and local nature escapes without draining your wallet. Entry discounts, gear hacks, and travel tricks included.</p>
+      </div>
+      <div>
+        <h2>🏃 Stay Active</h2>
+        <p>DIY workouts, free community fitness resources, and how to get moving without paying gym fees or buying gimmicky gear.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; Broke Mode Life 2025 - All Rights Reserved</p>
+    <p>
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy</a> |
+      <a href="affiliate.html">Affiliate</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="cookie.html">Cookie</a>
+    </p>
+  </footer>
 </body>
 </html>
