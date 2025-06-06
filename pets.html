@@ -1,140 +1,116 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>Pets</title>
-<style>
+  <meta charset="UTF-8" />
+  <title>Pets</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f5f5f5;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
+    header {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav {
+      background: black;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      margin: 0 10px;
+      text-decoration: none;
     }
     .tagline {
       font-size: 1.2rem;
       color: #555;
       text-align: center;
-      margin-bottom: 20px;
+      margin: 20px 0;
+      background-color: white;
+    }
+    .container {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
-    table td, table th {
-      padding: 6px;
-      border: 1px solid #ccc;
+    .grid > div {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    table caption {
-      font-weight: bold;
-      margin-bottom: 8px;
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      flex-shrink: 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 5px;
     }
   </style>
 </head>
 <body>
-<header style="background:black;color:white;padding:20px 0;text-align:center;">
-<h1 style="margin:0;">Pets</h1>
-<nav style="margin-top:10px;">
-<a href="index.html" style="color:white;font-weight:bold;margin:0 10px;">Home</a>
-<a href="freebies.html" style="color:white;font-weight:bold;margin:0 10px;">Freebies</a>
-<a href="all_you_can_eat.html" style="color:white;font-weight:bold;margin:0 10px;">All You Can Eat</a>
-<a href="apple_a_day.html" style="color:white;font-weight:bold;margin:0 10px;">Apple a Day</a>
-<a href="go_out_and_play.html" style="color:white;font-weight:bold;margin:0 10px;">Go Out and Play</a>
-<a href="style.html" style="color:white;font-weight:bold;margin:0 10px;">Style</a>
-<a href="listen_here.html" style="color:white;font-weight:bold;margin:0 10px;">Listen Here</a>
-<a href="cheers_mate.html" style="color:white;font-weight:bold;margin:0 10px;">Cheers Mate</a>
-<a href="travel.html" style="color:white;font-weight:bold;margin:0 10px;">Travel</a>
-<a href="pets.html" style="color:white;font-weight:bold;margin:0 10px;">Pets</a>
-<a href="shop.html" style="color:white;font-weight:bold;margin:0 10px;">Pets</a>
-<a href="lounge.html" style="color:white;font-weight:bold;margin:0 10px;">Lounge</a>
-</nav>
-</header><div class="tagline" style="text-align: center; background-color: white;">Cheap Treats, Big Love.</div>
-<div class="container">
-<div class="grid">
-<div style="background:#fff;padding:20px;margin-top:20px;border-radius:10px;box-shadow:0 0 5px rgba(0,0,0,0.1);">
-<h2>🐾 Pets — Cheap Treats, Big Love</h2>
-<p>You don’t need a fat wallet to have a happy pet. You just need heart, hustle, and a few smart hacks. Whether it barks, purrs, squeaks, or slithers — broke-mode pet care is possible, and it works.</p>
-<h3>🏠 Shelter &gt; Breeder</h3>
-<p>Adopt, don’t shop. Shelters are packed with amazing animals who just want a warm lap or a patch of sun. The adoption fee is usually less than a breeder’s deposit — and that often includes shots, microchipping, and spay/neuter.</p>
-<h3>🧼 DIY Grooming</h3>
-<p>Bathing your pet at home? Easy win. Baby shampoo, a good brush, and an old towel = spa day. YouTube’s full of grooming tutorials that cost less than one pro visit.</p>
-<h3>💊 Vet Bills Don’t Have to Crush You</h3>
-<p>Look for local vet schools or mobile clinics — they offer shots and checkups at a fraction of the cost. Ask about payment plans or wellness subscriptions. Preventive care is the move — skipping flea meds today = big vet bill tomorrow.</p>
-<h3>🐕 Dog Parks: The New Single Bars?</h3>
-<p>Dog parks are broke-mode gold: free exercise, built-in social time, and pure joy for your pet. But let’s be honest — show up with a rescue mutt and a reusable water bowl? You’re instantly interesting. Your dog breaks the ice. You just walk in smiling.</p>
-<p><strong>Love is free. Pets don’t care if their toy came from the clearance bin. They care if you throw it. Every time.</strong></p>
-</div>
-<div style="background:#fff8f0;padding:20px;border:1px solid #ffd6a0;border-radius:8px;">
-<table style="width:100%; border-collapse: collapse; margin-bottom: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.05); border-radius: 6px;">
-<caption style="font-weight: bold; margin-bottom: 8px;">DIY Pet Toys That Work</caption>
-<thead style="background-color: #fff3e6;">
-<tr>
-<th style="padding: 8px; border: 1px solid #ccc;">Item</th>
-<th style="padding: 8px; border: 1px solid #ccc;">How to Use It</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Old T-shirt</td><td>Braid it into a tug toy — dogs love it</td></tr>
-<tr><td>Cardboard Box</td><td>Cut holes for cats to explore + hide</td></tr>
-<tr><td>Toilet Paper Rolls</td><td>Hide kibble inside for foraging fun</td></tr>
-<tr><td>Water Bottle in Sock</td><td>Crunchy DIY chew toy (dogs go wild)</td></tr>
-</tbody>
-</table>
-<table style="width:100%; border-collapse: collapse; box-shadow: 0 0 8px rgba(0,0,0,0.05); border-radius: 6px;">
-<caption style="font-weight: bold; margin-bottom: 8px;">Cheap Treats They’ll Actually Eat</caption>
-<thead style="background-color: #fff3e6;">
-<tr>
-<th style="padding: 8px; border: 1px solid #ccc;">Treat</th>
-<th style="padding: 8px; border: 1px solid #ccc;">Why It’s a Win</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Frozen Banana Chunks</td><td>Cheap, healthy, and dog-safe</td></tr>
-<tr><td>Ice Cubes with Broth</td><td>Hydrating and fun to lick</td></tr>
-<tr><td>Cooked Carrots</td><td>Vet-approved crunch for dogs</td></tr>
-<tr><td>Plain Popcorn (No Salt)</td><td>Air-popped fun for most pets</td></tr>
-</tbody>
-</table>
-</div>
-<div style="background:#ffffff;padding:20px;border-radius:10px;box-shadow:0 0 5px rgba(0,0,0,0.1);">
-<h3>🧰 Pet Tools That Actually Help</h3>
-<p>✅ <strong>Collapsible Travel Bowls:</strong> Hydrate your pup on-the-go without spills. $7 on Amazon. Affiliate gold.</p>
-<p>✅ <strong>LED Collar Lights:</strong> Evening walks = visible dog. No surprises, no vet bills.</p>
-<p>✅ <strong>Lint Roller 3-Pack:</strong> Not for them. For you. Keep the fur off your broke-mode hoodie.</p>
-<h3>🌦️ Seasonal Pet Prep</h3>
-<p>🧣 <strong>Winter:</strong> Old socks can become paw warmers. A dollar-store hoodie becomes a dog parka.</p>
-<p>☀️ <strong>Summer:</strong> Ice packs under a towel = instant cooling bed. Keep walks to early AM or late PM.</p>
-<h3>🐾 Quick Wins</h3>
-<ul style="padding-left: 20px;">
-<li><strong>Peanut Butter in Kong:</strong> Instant calm. Also funny to watch.</li>
-<li><strong>Rotate Toys Weekly:</strong> Hide a few. Reintroduce later. They think they’re new.</li>
-<li><strong>Cat in Laundry Basket:</strong> No explanation needed. Just enjoy.</li>
-</ul>
-<p><strong>You don’t need a million gadgets — just a few that actually work.</strong></p>
-</div>
-</div>
-<div style="text-align: center; margin-top: 40px;">
-<a href="index.html" style="background-color: #333; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-        ⬅️ Back to Home
-      </a>
-</div>
-</div>
-<footer style="background:black;color:white;text-align:center;padding:20px 0;margin-top:40px;">
-<p style="margin:0;">© Broke Mode Life 2025 - All Rights Reserved</p>
-<nav style="margin-top:8px;">
-<a href="terms.html" style="color:#3399ff;margin:0 6px;">Terms</a> |
-      <a href="privacy.html" style="color:#3399ff;margin:0 6px;">Privacy</a> |
-      <a href="affiliate.html" style="color:#3399ff;margin:0 6px;">Affiliate</a> |
-      <a href="contact.html" style="color:#3399ff;margin:0 6px;">Contact</a> |
-      <a href="cookie.html" style="color:#3399ff;margin:0 6px;">Cookie</a>
-</nav>
-</footer>
+  <header>
+    <h1>Pets</h1>
+  </header>
+  <nav>
+    <a href="all_you_can_eat.html">All You Can Eat</a>
+    <a href="freebies.html">Freebies</a>
+    <a href="apple_a_day.html">Apple a Day</a>
+    <a href="gooutandplay.html">Go Out and Play</a>
+    <a href="style.html">Style</a>
+    <a href="listen_here.html">Listen Here</a>
+    <a href="cheers_mate.html">Cheers Mate</a>
+    <a href="travel.html">Travel</a>
+    <a href="pets.html">Pets</a>
+    <a href="shop.html">Shop</a>
+    <a href="lounge.html">Lounge</a>
+  </nav>
+  <div class="tagline">Live Large on a Lean Budget</div>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2> Budget Pet Supplies</h2>
+        <p>Find quality pet essentials without breaking the bank. From toys to treats to grooming tools, weve tracked down the best budget options.</p>
+      </div>
+      <div>
+        <h2> Smart Pet Deals</h2>
+        <p>Track rotating Amazon deals, subscribe-and-save hacks, and bulk buys that cut your cost per use while keeping your pet happy.</p>
+      </div>
+      <div>
+        <h2> DIY Pet Hacks</h2>
+        <p>Homemade toy ideas, budget-friendly pet food recipes, and practical tricks to stretch your dollar and still pamper your pet.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; Broke Mode Life 2025 - All Rights Reserved</p>
+    <p>
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy</a> |
+      <a href="affiliate.html">Affiliate</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="cookie.html">Cookie</a>
+    </p>
+  </footer>
 </body>
 </html>
