@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message Wall Moderation</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0; padding: 20px; }
+    .message { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+    .approve-btn { background: green; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Moderation Panel — Message Wall</h1>
+  <div id="moderation-list"></div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "brokemode-lounge.firebaseapp.com",
+      databaseURL: "https://brokemode-lounge-default-rtdb.firebaseio.com",
+      projectId: "brokemode-lounge",
+      storageBucket: "brokemode-lounge.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    function renderMessages(snapshot) {
+      const container = document.getElementById("moderation-list");
+      container.innerHTML = "";
+
+      const messages = snapshot.val();
+      for (let key in messages) {
+        if (!messages[key].approved) {
+          const msgDiv = document.createElement("div");
+          msgDiv.className = "message";
+          msgDiv.innerHTML = `<p>${messages[key].text}</p>`;
+          const btn = document.createElement("button");
+          btn.textContent = "Approve";
+          btn.className = "approve-btn";
+          btn.onclick = () => approveMessage(key, messages[key]);
+          msgDiv.appendChild(btn);
+          container.appendChild(msgDiv);
+        }
+      }
+    }
+
+    function approveMessage(key, msg) {
+      db.ref("modqueue/" + key).update({ approved: true });
+    }
+
+    db.ref("modqueue").on("value", renderMessages);
+  </script>
+</body>
+</html>
